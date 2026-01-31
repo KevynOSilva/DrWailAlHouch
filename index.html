@@ -24,7 +24,7 @@
         }
 
         .hero-section {
-            background: linear-gradient(to bottom, #1a1a1a 0%, #141414 50%, #0f0f0f 100%);
+            background: linear-gradient(to bottom, #2a2419 0%, #1a1510 50%, #18191c 100%);
         }
 
         .section-container {
@@ -656,6 +656,164 @@
             font-size: 14px;
         }
 
+        /* Video Testimonials Section */
+        .video-testimonials {
+            padding: 60px 0;
+            background: #18191c;
+            overflow: hidden;
+        }
+
+        .video-carousel {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .video-carousel-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-carousel-track {
+            display: flex;
+            gap: 40px;
+            transition: transform 0.5s ease;
+        }
+
+        .video-testimonial-item {
+            min-width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .video-quote {
+            padding: 40px;
+        }
+
+        .video-quote-text {
+            font-size: 28px;
+            line-height: 1.4;
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .video-quote-author {
+            font-size: 18px;
+            color: #e8a955;
+            font-weight: 600;
+        }
+
+        .video-quote-role {
+            font-size: 14px;
+            color: #9ca3af;
+            margin-top: 5px;
+        }
+
+        .video-container {
+            position: relative;
+            background: rgba(30, 35, 42, 0.5);
+            border: 2px solid rgba(232, 169, 85, 0.3);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 177.78%; /* 9:16 aspect ratio for shorts */
+            height: 0;
+            max-height: 620px;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .carousel-btn {
+            width: 50px;
+            height: 50px;
+            background: rgba(232, 169, 85, 0.2);
+            border: 1px solid #e8a955;
+            border-radius: 50%;
+            color: #e8a955;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(232, 169, 85, 0.3);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(232, 169, 85, 0.4);
+        }
+
+        .carousel-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .carousel-btn:disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(232, 169, 85, 0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .carousel-dot.active {
+            background: #e8a955;
+            width: 30px;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 1024px) {
+            .video-testimonial-item {
+                grid-template-columns: 1fr;
+            }
+
+            .video-quote-text {
+                font-size: 22px;
+            }
+        }
+
         @media (max-width: 1024px) {
             .hero {
                 grid-template-columns: 1fr;
@@ -875,6 +1033,83 @@
             </div>
         </section>
         
+        <!-- Video Testimonials Section -->
+        <section class="video-testimonials">
+            <div class="section-container">
+                <h2 class="section-title">Depoimentos em <span class="highlight">Vídeo</span></h2>
+                <p class="section-subtitle">Veja o que profissionais da área têm a dizer</p>
+            </div>
+
+            <div class="video-carousel">
+                <div class="video-carousel-container">
+                    <div class="video-carousel-track" id="videoCarouselTrack">
+                        <!-- Slide 1 - Dr Emanuel -->
+                        <div class="video-testimonial-item">
+                            <div class="video-quote">
+                                <p class="video-quote-text">"Conteúdo excepcional que mudou minha visão sobre implantodontia. Recomendo para todos os profissionais da área."</p>
+                                <div class="video-quote-author">Dr. Emanuel</div>
+                                <div class="video-quote-role">Implantodontista</div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-wrapper">
+                                    <iframe src="https://www.youtube.com/embed/ZWxjI0tWr6U" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 - Dra Natália -->
+                        <div class="video-testimonial-item">
+                            <div class="video-quote">
+                                <p class="video-quote-text">"Uma abordagem única e profunda sobre raciocínio clínico. Essencial para quem busca excelência."</p>
+                                <div class="video-quote-author">Dra. Natália Lucena</div>
+                                <div class="video-quote-role">Especialista em Implantodontia</div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-wrapper">
+                                    <iframe src="https://www.youtube.com/embed/CVMRnu5TTnc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 - Dr Wail -->
+                        <div class="video-testimonial-item">
+                            <div class="video-quote">
+                                <p class="video-quote-text">"Mais de 30 anos de experiência condensados em conhecimento prático e aplicável. Um divisor de águas."</p>
+                                <div class="video-quote-author">Dr. Wail Al Houch</div>
+                                <div class="video-quote-role">Criador do Sistema SelfConnect</div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-wrapper">
+                                    <iframe src="https://www.youtube.com/embed/ug7FsC-bM4M" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 - Dra Agnete -->
+                        <div class="video-testimonial-item">
+                            <div class="video-quote">
+                                <p class="video-quote-text">"O sistema SelfConnect revolucionou minha prática clínica. Inovação e praticidade em um só lugar."</p>
+                                <div class="video-quote-author">Dra. Agnete</div>
+                                <div class="video-quote-role">Sobre o SelfConnect</div>
+                            </div>
+                            <div class="video-container">
+                                <div class="video-wrapper">
+                                    <iframe src="https://www.youtube.com/embed/YlrsGSj9oVE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="prevBtn" onclick="moveCarousel(-1)">‹</button>
+                    <button class="carousel-btn" id="nextBtn" onclick="moveCarousel(1)">›</button>
+                </div>
+
+                <div class="carousel-indicators" id="carouselIndicators"></div>
+            </div>
+        </section>
+        
         <!-- Testimonials Section -->
         <section class="testimonials">
             <div class="section-container">
@@ -1091,6 +1326,49 @@
     </a>
 
     <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.video-testimonial-item');
+        const totalSlides = slides.length;
+        const track = document.getElementById('videoCarouselTrack');
+        const indicatorsContainer = document.getElementById('carouselIndicators');
+
+        // Create indicators
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'carousel-dot';
+            if (i === 0) dot.classList.add('active');
+            dot.onclick = () => goToSlide(i);
+            indicatorsContainer.appendChild(dot);
+        }
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update indicators
+            document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+
+            // Update buttons
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function moveCarousel(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = 0;
+            if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        // Initialize
+        updateCarousel();
+
         function toggleFaq(element) {
             const faqItem = element.parentElement;
             const answer = faqItem.querySelector('.faq-answer');
