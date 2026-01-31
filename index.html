@@ -24,7 +24,7 @@
         }
 
         .hero-section {
-            background: linear-gradient(to bottom, #2a2419 0%, #1a1510 50%, #18191c 100%);
+            background: linear-gradient(to bottom, #1a1a1a 0%, #141414 50%, #0f0f0f 100%);
         }
 
         .section-container {
@@ -179,8 +179,8 @@
 
         .book-mockup {
             width: 100%;
-            max-width: 350px;
-            height: 480px;
+            max-width: 438px;
+            height: 600px;
             background: url('https://i.ibb.co/39Rm23Jz/imagem-2026-01-25-162419358.png') center/cover no-repeat;
             border-radius: 12px;
             display: flex;
@@ -726,21 +726,61 @@
         }
 
         .video-wrapper {
-            position: relative;
-            width: 100%;
-            height: 620px;
-            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border-radius: 12px;
             background: #000;
+            overflow: hidden;
+            position: relative;
         }
 
         .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            width: 315px;
+            height: 560px;
             border: none;
+        }
+
+        .video-link {
+            display: block;
+            width: 315px;
+            height: 560px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .video-link:hover {
+            transform: scale(1.02);
+        }
+
+        .video-link::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(232, 169, 85, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-link::after {
+            content: '▶';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-40%, -50%);
+            font-size: 40px;
+            color: #000;
+            z-index: 1;
         }
 
         .carousel-controls {
@@ -875,12 +915,12 @@
                 <h1>Implantes que Duram <span class="highlight">a Vida Toda</span></h1>
                 
                 <p class="hero-description">
-                    Implantes não falham por acaso — falham por decisões. Descubra o raciocínio clínico que separa implantes que duram décadas daqueles que fracassam.
+                    Implantes não falham por acaso — falham por decisões. Descubra o raciocínio clínico que separa implantes bem-sucedidos daqueles que fracassam.
                 </p>
                 
                 <div class="buttons">
-                    <a href="#" class="btn-primary">Comprar agora →</a>
-                    <a href="#" class="btn-secondary">Ver prévia grátis</a>
+                    <a href="#" class="btn-primary">Adquira Agora →</a>
+                    <a href="https://drive.google.com/file/d/17nJYbuBHxKRNIMKgCMopoQc7tCeGXlFG/view?usp=sharing" target="_blank" class="btn-secondary">Ver prévia grátis</a>
                 </div>
                 
                 <div class="rating">
@@ -904,7 +944,7 @@
         <!-- Learning Section -->
         <section class="learning">
             <div class="section-container">
-            <h2 class="section-title">O que você vai <span class="highlight">aprender</span></h2>
+            <h2 class="section-title">O que você vai <span class="highlight">encontrar</span></h2>
             <p class="section-subtitle">Um convite à reflexão clínica consciente para implantodontistas que buscam excelência</p>
             
             <div class="features-grid">
@@ -952,11 +992,14 @@
                 <div class="feature-card">
                     <div class="icon-box">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            <path d="M20 7h-9"></path>
+                            <path d="M14 17H5"></path>
+                            <circle cx="17" cy="17" r="3"></circle>
+                            <circle cx="7" cy="7" r="3"></circle>
                         </svg>
                     </div>
-                    <h3>Experiência Real</h3>
-                    <p>Baseado em mais de 30 anos de prática clínica e observação de padrões de sucesso.</p>
+                    <h3>Vantagem Exclusiva</h3>
+                    <p>Kit completo de peças para sistemas HE e CM (Ankylos), desenvolvido ao longo de décadas de prática.</p>
                 </div>
                 
                 <div class="feature-card">
@@ -1002,11 +1045,11 @@
                         <h2 class="author-name">Dr. Wail <span class="highlight">Al Houch</span></h2>
                         
                         <p class="author-description">
-                            Especialista em Implantodontia desde 1994, formado na primeira turma do Brasil. Pioneiro no trabalho com sistemas HE, HI (Frialit) e CM (Ankylos).
+                            Especialista em Implantodontia desde 1994, formado na primeira turma do Brasil. Pioneiro no trabalho com sistemas HE e CM (Ankylos). Experiência com  HI (Frialit)
                         </p>
                         
                         <p class="author-description">
-                            Desenvolvedor do sistema SelfConnect — coroas fixadas sem parafuso e sem cimento, com patente registrada em 2013. Mestre em Implantodontia (2014-2016).
+                            Desenvolvedor do sistema SelfConnect — coroas fixadas sem parafuso e sem cimento, com várias patentes registradas. Mestre em Implantodontia (2014-2016).
                         </p>
                         
                         <p class="author-description">
@@ -1019,12 +1062,12 @@
                                 <div class="stat-label">Anos de experiência</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-number">1994</div>
-                                <div class="stat-label">Primeira turma BR</div>
+                                <div class="stat-number">1996</div>
+                                <div class="stat-label">Turma de formação</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-number">1</div>
-                                <div class="stat-label">Patente registrada</div>
+                                <div class="stat-number">Várias</div>
+                                <div class="stat-label">Patentes registradas</div>
                             </div>
                         </div>
                     </div>
@@ -1035,8 +1078,8 @@
         <!-- Video Testimonials Section -->
         <section class="video-testimonials">
             <div class="section-container">
-                <h2 class="section-title">Depoimentos em <span class="highlight">Vídeo</span></h2>
-                <p class="section-subtitle">Veja o que profissionais da área têm a dizer</p>
+                <h2 class="section-title" style="text-align: center;">Depoimentos em <span class="highlight">Vídeo</span></h2>
+                <p class="section-subtitle"style="text-align: center;">Veja o que profissionais da área têm a dizer</p>
             </div>
 
             <div class="video-carousel">
@@ -1051,7 +1094,14 @@
                             </div>
                             <div class="video-container">
                                 <div class="video-wrapper">
-                                    <iframe src="https://www.youtube.com/embed/0CJWRqWT7_A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe 
+                                        width="315" 
+                                        height="560" 
+                                        src="https://www.youtube.com/embed/0CJWRqWT7_A?playsinline=1" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
                                 </div>
                             </div>
                         </div>
@@ -1065,7 +1115,14 @@
                             </div>
                             <div class="video-container">
                                 <div class="video-wrapper">
-                                    <iframe src="https://www.youtube.com/embed/CVMRnu5TTnc?rel=0&modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe 
+                                        width="315" 
+                                        height="560" 
+                                        src="https://www.youtube.com/watch?v=0xyxtzD54rM&list=RDLYU-8IFcDPw&index=10" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
                                 </div>
                             </div>
                         </div>
@@ -1079,7 +1136,14 @@
                             </div>
                             <div class="video-container">
                                 <div class="video-wrapper">
-                                    <iframe src="https://www.youtube.com/embed/ug7FsC-bM4M?rel=0&modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe 
+                                        width="315" 
+                                        height="560" 
+                                        src="https://www.youtube.com/embed/ug7FsC-bM4M" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
                                 </div>
                             </div>
                         </div>
@@ -1093,7 +1157,14 @@
                             </div>
                             <div class="video-container">
                                 <div class="video-wrapper">
-                                    <iframe src="https://www.youtube.com/embed/YlrsGSj9oVE?rel=0&modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe 
+                                        width="315" 
+                                        height="560" 
+                                        src="https://www.youtube.com/embed/YlrsGSj9oVE" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
                                 </div>
                             </div>
                         </div>
@@ -1184,8 +1255,8 @@
         <!-- Pricing Section -->
         <section class="pricing">
             <div class="section-container">
-            <h2 class="section-title">Invista no seu <span class="highlight">futuro</span></h2>
-            <p class="section-subtitle">Um pequeno investimento que pode mudar completamente sua trajetória</p>
+            <h2 class="section-title">Invista no seu <span class="highlight">conhecimento</span></h2>
+            <p class="section-subtitle">E aprenda sobre Implantes que Duram a Vida Toda</p>
             
             <div class="pricing-card">
                 <div class="special-offer">
