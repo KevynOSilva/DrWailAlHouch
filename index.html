@@ -268,6 +268,156 @@
             line-height: 1.6;
         }
 
+        /* SelfConnect Section */
+        .selfconnect {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .selfconnect::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(232, 169, 85, 0.15) 0%, transparent 70%);
+            filter: blur(100px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .selfconnect-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .selfconnect-content {
+            padding-right: 40px;
+        }
+
+        .selfconnect-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(232, 169, 85, 0.15);
+            border: 1px solid rgba(232, 169, 85, 0.3);
+            padding: 10px 20px;
+            border-radius: 50px;
+            color: #e8a955;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .selfconnect-title {
+            font-size: 52px;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .selfconnect-description {
+            color: #9ca3af;
+            line-height: 1.8;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .selfconnect-features {
+            margin-top: 40px;
+            display: grid;
+            gap: 20px;
+        }
+
+        .selfconnect-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            background: rgba(30, 35, 42, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .selfconnect-feature-item:hover {
+            background: rgba(35, 40, 47, 0.5);
+            border-color: rgba(232, 169, 85, 0.3);
+            transform: translateX(5px);
+        }
+
+        .selfconnect-feature-icon {
+            width: 24px;
+            height: 24px;
+            color: #e8a955;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .selfconnect-feature-text {
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .selfconnect-image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .selfconnect-image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .selfconnect-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle, rgba(232, 169, 85, 0.2) 0%, transparent 70%);
+            filter: blur(60px);
+            z-index: 0;
+        }
+
+        .selfconnect-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(232, 169, 85, 0.2);
+        }
+
+        .patent-badge {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: linear-gradient(135deg, #e8a955 0%, #d89840 100%);
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 10px 30px rgba(232, 169, 85, 0.4);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         /* Author Section */
         .author {
             padding: 60px 0;
@@ -361,7 +511,7 @@
             background: rgba(30, 35, 42, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 16px;
-            padding: 50px; /* Aumentado de 40px para 50px (25% a mais) */
+            padding: 50px;
             position: relative;
             text-align: left;
             transition: all 0.3s;
@@ -850,15 +1000,22 @@
             .video-quote-text {
                 font-size: 22px;
             }
-        }
 
-        @media (max-width: 1024px) {
             .hero {
                 grid-template-columns: 1fr;
             }
 
             .author-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .selfconnect-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .selfconnect-content {
+                padding-right: 0;
             }
 
             .features-grid {
@@ -873,6 +1030,10 @@
         @media (max-width: 768px) {
             h1 {
                 font-size: 40px;
+            }
+
+            .selfconnect-title {
+                font-size: 36px;
             }
 
             .features-grid {
@@ -938,6 +1099,7 @@
             <div class="hero-image">
                 <div class="book-mockup"></div>
             </div>
+        </section>
         </section>
         
         <!-- Learning Section -->
@@ -1027,6 +1189,61 @@
                     <p>A implantodontia real é mais complexa, e mais interessant, do que catalogo, receitas prontas e instrução de uso.</p>
                 </div>
             </div>
+            </div>
+        </section>
+
+        <!-- SelfConnect Section -->
+        <section class="selfconnect">
+            <div class="section-container">
+                <div class="selfconnect-grid">
+                    <div class="selfconnect-content">
+                        <div class="selfconnect-label">
+                            🔬 Tecnologia Patenteada
+                        </div>
+                        
+                        <h2 class="selfconnect-title">Sistema <span class="highlight">SelfConnect</span></h2>
+                        
+                        <p class="selfconnect-description">
+                            Uma revolução na implantodontia: coroas fixadas sem parafuso e sem cimento. O sistema SelfConnect representa anos de pesquisa e desenvolvimento, combinando precisão mecânica com simplicidade clínica.
+                        </p>
+                        
+                        <p class="selfconnect-description">
+                            Desenvolvido e patenteado pelo Dr. Wail Al Houch, este sistema elimina as principais causas de falha em próteses sobre implantes, oferecendo uma solução verdadeiramente inovadora para a prática clínica moderna.
+                        </p>
+                        
+                        <div class="selfconnect-features">
+                            <div class="selfconnect-feature-item">
+                                <span class="selfconnect-feature-icon">✓</span>
+                                <span class="selfconnect-feature-text"><strong>Sem Parafuso, Sem Cimento:</strong> Elimina afrouxamento de parafuso e problemas de excesso de cimento</span>
+                            </div>
+                            
+                            <div class="selfconnect-feature-item">
+                                <span class="selfconnect-feature-icon">✓</span>
+                                <span class="selfconnect-feature-text"><strong>Retenção por Fricção:</strong> Sistema mecânico de alta precisão garante estabilidade superior</span>
+                            </div>
+                            
+                            <div class="selfconnect-feature-item">
+                                <span class="selfconnect-feature-icon">✓</span>
+                                <span class="selfconnect-feature-text"><strong>Reversibilidade Total:</strong> Facilidade na remoção quando necessário, sem danos à estrutura</span>
+                            </div>
+                            
+                            <div class="selfconnect-feature-item">
+                                <span class="selfconnect-feature-icon">✓</span>
+                                <span class="selfconnect-feature-text"><strong>Durabilidade Comprovada:</strong> Menos pontos de falha significam maior longevidade do tratamento</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="selfconnect-image-container">
+                        <div class="selfconnect-image-wrapper">
+                            <div class="patent-badge">
+                                🏆 Patente Registrada
+                            </div>
+                            <img src="https://i.ibb.co/B5bnM9dJ/imagem-2026-01-31-185635739.png" alt="Sistema SelfConnect" class="selfconnect-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         
         <!-- Author Section -->
@@ -1074,7 +1291,7 @@
             </div>
         </section>
         
-<!-- Video Testimonials Section -->
+        <!-- Video Testimonials Section -->
         <section class="video-testimonials">
             <div class="section-container">
                 <h2 class="section-title" style="text-align: center;">Depoimentos em <span class="highlight">Vídeo</span></h2>
@@ -1148,7 +1365,7 @@
                             </div>
                         </div>
 
-                        <!-- Slide 4 - Dra Agnete 2 (NOVO) -->
+                        <!-- Slide 4 - Dra Agnete 2 -->
                         <div class="video-testimonial-item">
                             <div class="video-quote">
                                 <p class="video-quote-text">"Um amigo e excelente dentista, cirurgião de alta excelência. Veio da Síria para fazer a diferença na odontologia brasileira, trazendo conhecimento e inovação."</p>
@@ -1169,7 +1386,7 @@
                             </div>
                         </div>
 
-                        <!-- Slide 5 - Dr. Aguiar (NOVO) -->
+                        <!-- Slide 5 - Dr. Aguiar -->
                         <div class="video-testimonial-item">
                             <div class="video-quote">
                                 <p class="video-quote-text">"Em 40 anos de jornada, tive o privilégio de trabalhar com excelentes profissionais, mas devo dar destaque especial ao Dr. Wail. Um cientista brilhante que planejou, criou e fabricou uma linha completa de componentes para implantes dentários."</p>
@@ -1190,7 +1407,7 @@
                             </div>
                         </div>
 
-                        <!-- Slide 6 - Dr Wail (ÚLTIMO) -->
+                        <!-- Slide 6 - Dr Wail -->
                         <div class="video-testimonial-item">
                             <div class="video-quote">
                                 <p class="video-quote-text">"O sistema SelfConnect revolucionou minha prática clínica. Inovação e praticidade em um só lugar, com aplicação simples e resultados extraordinários."</p>
@@ -1222,145 +1439,6 @@
             </div>
         </section>
 
-        <style>
-            /* Ajustes para centralizar e evitar corte do mockup */
-            .video-carousel-container {
-                overflow: hidden;
-                width: 100%;
-                max-width: 1400px;
-                margin: 0 auto;
-            }
-
-            .video-carousel-track {
-                display: flex;
-                transition: transform 0.5s ease;
-            }
-
-            .video-testimonial-item {
-                display: flex;
-                gap: 3rem;
-                align-items: center;
-                justify-content: center;
-                min-width: 100%;
-                padding: 2rem 3rem;
-                box-sizing: border-box;
-            }
-
-            .video-quote {
-                flex: 1;
-                max-width: 550px;
-                text-align: left;
-            }
-
-            .video-container {
-                flex-shrink: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .video-wrapper {
-                position: relative;
-                width: 100%;
-                max-width: 360px;
-            }
-
-            /* Responsivo */
-            @media (max-width: 1024px) {
-                .video-testimonial-item {
-                    gap: 2rem;
-                    padding: 2rem;
-                }
-
-                .video-wrapper {
-                    max-width: 320px;
-                }
-            }
-
-            @media (max-width: 768px) {
-                .video-testimonial-item {
-                    flex-direction: column;
-                    padding: 1.5rem 1rem;
-                    gap: 1.5rem;
-                }
-
-                .video-quote {
-                    text-align: center;
-                    max-width: 100%;
-                }
-
-                .video-wrapper {
-                    max-width: 300px;
-                }
-            }
-        </style>
-
-        <script>
-            // Video Carousel JavaScript com funcionalidade de pausar vídeos
-            let currentSlide = 0;
-            const track = document.getElementById('videoCarouselTrack');
-            const items = document.querySelectorAll('.video-testimonial-item');
-            const totalSlides = items.length;
-
-            // Criar indicadores
-            const indicatorsContainer = document.getElementById('carouselIndicators');
-            for (let i = 0; i < totalSlides; i++) {
-                const dot = document.createElement('div');
-                dot.classList.add('carousel-dot');
-                if (i === 0) dot.classList.add('active');
-                dot.addEventListener('click', () => goToSlide(i));
-                indicatorsContainer.appendChild(dot);
-            }
-
-            // Função para pausar todos os vídeos
-            function pauseAllVideos() {
-                const iframes = document.querySelectorAll('.video-wrapper iframe');
-                iframes.forEach(iframe => {
-                    // Envia comando para pausar o vídeo do YouTube
-                    iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                });
-            }
-
-            // Função para mover o carrossel
-            function moveCarousel(direction) {
-                // Pausar todos os vídeos antes de trocar de slide
-                pauseAllVideos();
-                
-                currentSlide += direction;
-                
-                if (currentSlide < 0) {
-                    currentSlide = totalSlides - 1;
-                } else if (currentSlide >= totalSlides) {
-                    currentSlide = 0;
-                }
-                
-                updateCarousel();
-            }
-
-            // Função para ir para um slide específico
-            function goToSlide(index) {
-                // Pausar todos os vídeos antes de trocar de slide
-                pauseAllVideos();
-                
-                currentSlide = index;
-                updateCarousel();
-            }
-
-            // Função para atualizar a posição do carrossel e os indicadores
-            function updateCarousel() {
-                const offset = -currentSlide * 100;
-                track.style.transform = `translateX(${offset}%)`;
-                
-                // Atualizar indicadores
-                const dots = document.querySelectorAll('.carousel-dot');
-                dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === currentSlide);
-                });
-            }
-
-            // Inicializar o carrossel
-            updateCarousel();
-        </script>
         <!-- Testimonials Section -->
         <section class="testimonials">
             <div class="section-container">
@@ -1431,6 +1509,7 @@
                     </div>
                 </div>
             </div>
+            </div>
         </section>
         
         <!-- Pricing Section -->
@@ -1492,6 +1571,7 @@
                 
                 <p class="security-note">🔒 Pagamento 100% seguro • Satisfação garantida</p>
             </div>
+            </div>
         </section>
         
         <!-- FAQ Section -->
@@ -1519,7 +1599,7 @@
                     <div class="faq-answer">
                         <p>Este não é um manual passo a passo, nem um guia técnico para execução imediata.
 Também não é um curso completo de implantodontia, tampouco uma promessa de resultados rápidos ou milagrosos.
-Aqui não há fórmulas prontas. Não há receitas universais. Não há promessas fáceis. A implantodontia real não se curva a protocolos engessados. Ela nasce do raciocínio clínico, da leitura fina do osso, do tecido, do paciente.</p>
+Aqui não há fórmulas prontas. Não há receitas universais. Não há promessas fáceis. A implantodontia real não se curva a protocolos engessados. Ela nasce do raciocínio clínico, da leitura fina do osso, do tecido, do paciente.</p>
                     </div>
                 </div>
                 
@@ -1553,10 +1633,12 @@ Aqui não há fórmulas prontas. Não há receitas universais. Não há promessa
                     </div>
                 </div>
             </div>
+            </div>
         </section>
         
         <!-- Footer -->
         <footer>
+            <div class="section-container">
             <div class="footer-content">
                 <div class="footer-logo">
                     Implantes <span>Dr. Wail</span>
@@ -1570,6 +1652,7 @@ Aqui não há fórmulas prontas. Não há receitas universais. Não há promessa
                     © 2026 Todos os direitos reservados
                 </div>
             </div>
+            </div>
         </footer>
     </div>
 
@@ -1582,54 +1665,70 @@ Aqui não há fórmulas prontas. Não há receitas universais. Não há promessa
 
     <script>
         let currentSlide = 0;
-        const slides = document.querySelectorAll('.video-testimonial-item');
-        const totalSlides = slides.length;
         const track = document.getElementById('videoCarouselTrack');
-        const indicatorsContainer = document.getElementById('carouselIndicators');
+        const items = document.querySelectorAll('.video-testimonial-item');
+        const totalSlides = items.length;
 
-        // Create indicators
+        // Criar indicadores
+        const indicatorsContainer = document.getElementById('carouselIndicators');
         for (let i = 0; i < totalSlides; i++) {
             const dot = document.createElement('div');
-            dot.className = 'carousel-dot';
+            dot.classList.add('carousel-dot');
             if (i === 0) dot.classList.add('active');
-            dot.onclick = () => goToSlide(i);
+            dot.addEventListener('click', () => goToSlide(i));
             indicatorsContainer.appendChild(dot);
         }
 
-        function updateCarousel() {
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
-            
-            // Update indicators
-            document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
+        // Função para pausar todos os vídeos
+        function pauseAllVideos() {
+            const iframes = document.querySelectorAll('.video-wrapper iframe');
+            iframes.forEach(iframe => {
+                iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
             });
-
-            // Update buttons
-            document.getElementById('prevBtn').disabled = currentSlide === 0;
-            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
         }
 
+        // Função para mover o carrossel
         function moveCarousel(direction) {
+            pauseAllVideos();
+            
             currentSlide += direction;
-            if (currentSlide < 0) currentSlide = 0;
-            if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+            
+            if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            } else if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            }
+            
             updateCarousel();
         }
 
+        // Função para ir para um slide específico
         function goToSlide(index) {
+            pauseAllVideos();
             currentSlide = index;
             updateCarousel();
         }
 
-        // Initialize
+        // Função para atualizar a posição do carrossel e os indicadores
+        function updateCarousel() {
+            const offset = -currentSlide * 100;
+            track.style.transform = `translateX(${offset}%)`;
+            
+            const dots = document.querySelectorAll('.carousel-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        // Inicializar o carrossel
         updateCarousel();
 
+        // FAQ toggle function
         function toggleFaq(element) {
             const faqItem = element.parentElement;
             const answer = faqItem.querySelector('.faq-answer');
             const arrow = element.querySelector('.faq-arrow');
             
-            // Close all other FAQs
             document.querySelectorAll('.faq-answer').forEach(item => {
                 if (item !== answer) {
                     item.classList.remove('active');
@@ -1642,7 +1741,6 @@ Aqui não há fórmulas prontas. Não há receitas universais. Não há promessa
                 }
             });
             
-            // Toggle current FAQ
             answer.classList.toggle('active');
             arrow.classList.toggle('active');
         }
