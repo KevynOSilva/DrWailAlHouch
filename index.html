@@ -1222,47 +1222,74 @@
         </section>
 
         <style>
-            /* Ajustes para evitar corte do mockup */
+            /* Ajustes para centralizar e evitar corte do mockup */
             .video-carousel-container {
                 overflow: hidden;
                 width: 100%;
-                padding: 0 20px; /* Adiciona padding nas laterais */
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+
+            .video-carousel-track {
+                display: flex;
+                transition: transform 0.5s ease;
             }
 
             .video-testimonial-item {
                 display: flex;
-                gap: 2rem;
+                gap: 3rem;
                 align-items: center;
                 justify-content: center;
                 min-width: 100%;
-                padding: 2rem 1rem; /* Adiciona padding interno */
-            }
-
-            .video-container {
-                flex-shrink: 0;
-                max-width: 400px; /* Limita largura máxima */
-                margin-right: 40px; /* Adiciona margem à direita para evitar corte */
+                padding: 2rem 3rem;
+                box-sizing: border-box;
             }
 
             .video-quote {
                 flex: 1;
-                max-width: 500px;
+                max-width: 550px;
+                text-align: left;
+            }
+
+            .video-container {
+                flex-shrink: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .video-wrapper {
+                position: relative;
+                width: 100%;
+                max-width: 360px;
             }
 
             /* Responsivo */
+            @media (max-width: 1024px) {
+                .video-testimonial-item {
+                    gap: 2rem;
+                    padding: 2rem;
+                }
+
+                .video-wrapper {
+                    max-width: 320px;
+                }
+            }
+
             @media (max-width: 768px) {
                 .video-testimonial-item {
                     flex-direction: column;
-                    padding: 1rem 0.5rem;
+                    padding: 1.5rem 1rem;
+                    gap: 1.5rem;
                 }
 
-                .video-container {
-                    margin-right: 0;
+                .video-quote {
+                    text-align: center;
                     max-width: 100%;
                 }
 
-                .video-carousel-container {
-                    padding: 0 10px;
+                .video-wrapper {
+                    max-width: 300px;
                 }
             }
         </style>
