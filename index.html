@@ -268,156 +268,6 @@
             line-height: 1.6;
         }
 
-        /* SelfConnect Section */
-        .selfconnect {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .selfconnect::before {
-            content: '';
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(232, 169, 85, 0.15) 0%, transparent 70%);
-            filter: blur(100px);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .selfconnect-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .selfconnect-content {
-            padding-right: 40px;
-        }
-
-        .selfconnect-label {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(232, 169, 85, 0.15);
-            border: 1px solid rgba(232, 169, 85, 0.3);
-            padding: 10px 20px;
-            border-radius: 50px;
-            color: #e8a955;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-        }
-
-        .selfconnect-title {
-            font-size: 52px;
-            margin-bottom: 30px;
-            line-height: 1.2;
-        }
-
-        .selfconnect-description {
-            color: #9ca3af;
-            line-height: 1.8;
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
-
-        .selfconnect-features {
-            margin-top: 40px;
-            display: grid;
-            gap: 20px;
-        }
-
-        .selfconnect-feature-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            padding: 20px;
-            background: rgba(30, 35, 42, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            transition: all 0.3s;
-        }
-
-        .selfconnect-feature-item:hover {
-            background: rgba(35, 40, 47, 0.5);
-            border-color: rgba(232, 169, 85, 0.3);
-            transform: translateX(5px);
-        }
-
-        .selfconnect-feature-icon {
-            width: 24px;
-            height: 24px;
-            color: #e8a955;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .selfconnect-feature-text {
-            color: #fff;
-            line-height: 1.6;
-        }
-
-        .selfconnect-image-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .selfconnect-image-wrapper {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-        }
-
-        .selfconnect-image-wrapper::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 120%;
-            height: 120%;
-            background: radial-gradient(circle, rgba(232, 169, 85, 0.2) 0%, transparent 70%);
-            filter: blur(60px);
-            z-index: 0;
-        }
-
-        .selfconnect-image {
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-            position: relative;
-            z-index: 1;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            border: 2px solid rgba(232, 169, 85, 0.2);
-        }
-
-        .patent-badge {
-            position: absolute;
-            top: -15px;
-            right: -15px;
-            background: linear-gradient(135deg, #e8a955 0%, #d89840 100%);
-            color: #000;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 14px;
-            box-shadow: 0 10px 30px rgba(232, 169, 85, 0.4);
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
         /* Author Section */
         .author {
             padding: 60px 0;
@@ -1013,15 +863,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .selfconnect-grid {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-
-            .selfconnect-content {
-                padding-right: 0;
-            }
-
             .features-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -1034,10 +875,6 @@
         @media (max-width: 768px) {
             h1 {
                 font-size: 40px;
-            }
-
-            .selfconnect-title {
-                font-size: 36px;
             }
 
             .features-grid {
@@ -1163,8 +1000,8 @@
                             <circle cx="7" cy="7" r="3"></circle>
                         </svg>
                     </div>
-                    <h3>Vantagem Exclusiva 🏆</h3>
-                    <p>Kit transfer mini pilar usado no fluxo laboratorial e Hands-On seu trabalho mais preciso. Transfer furos laterais, moldeira aberta ou fechada, conceito preciso para transferência (4 und).</p>
+                    <h3>Evolução Contínua</h3>
+                    <p>A implantodontia não é estática. Acompanhar evidências, questionar práticas e adaptar condutas faz parte do crescimento profissional consciente.</p>
                 </div>
                 
                 <div class="feature-card">
@@ -1193,60 +1030,6 @@
                     <p>A implantodontia real é mais complexa, e mais interessant, do que catalogo, receitas prontas e instrução de uso.</p>
                 </div>
             </div>
-            </div>
-        </section>
-
-        <!-- SelfConnect Section -->
-        <section class="selfconnect">
-            <div class="section-container">
-                <div class="selfconnect-grid">
-                    <div class="selfconnect-content">
-                        <div class="selfconnect-label">
-                            🔬 Tecnologia Patenteada
-                        </div>
-                        
-                        <h2 class="selfconnect-title">Sistema <span class="highlight">SelfConnect</span></h2>
-                        
-                        <p class="selfconnect-description">
-                            Uma revolução na implantodontia: coroas fixadas sem parafuso e sem cimento. O sistema SelfConnect representa anos de pesquisa e desenvolvimento, combinando precisão mecânica com simplicidade clínica.
-                        </p>
-                        
-                        <p class="selfconnect-description">
-                            Desenvolvido e patenteado pelo Dr. Wail Al Houch, este sistema elimina as principais causas de falha em próteses sobre implantes, oferecendo uma solução verdadeiramente inovadora para a prática clínica moderna.
-                        </p>
-                        
-                        <div class="selfconnect-features">
-                            <div class="selfconnect-feature-item">
-                                <span class="selfconnect-feature-icon">✓</span>
-                                <span class="selfconnect-feature-text"><strong>Sem Parafuso, Sem Cimento:</strong> Elimina afrouxamento de parafuso e problemas de excesso de cimento</span>
-                            </div>
-                            
-                            <div class="selfconnect-feature-item">
-                                <span class="selfconnect-feature-icon">✓</span>
-                                <span class="selfconnect-feature-text"><strong>Retenção por Fricção:</strong> Sistema mecânico de alta precisão garante estabilidade superior</span>
-                            </div>
-                            
-                            <div class="selfconnect-feature-item">
-                                <span class="selfconnect-feature-icon">✓</span>
-                                <span class="selfconnect-feature-text"><strong>Reversibilidade Total:</strong> Facilidade na remoção quando necessário, sem danos à estrutura</span>
-                            </div>
-                            
-                            <div class="selfconnect-feature-item">
-                                <span class="selfconnect-feature-icon">✓</span>
-                                <span class="selfconnect-feature-text"><strong>Durabilidade Comprovada:</strong> Menos pontos de falha significam maior longevidade do tratamento</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="selfconnect-image-container">
-                        <div class="selfconnect-image-wrapper">
-                            <div class="patent-badge">
-                                🏆 Patente Registrada
-                            </div>
-                            <img src="https://i.ibb.co/B5bnM9dJ/imagem-2026-01-31-185635739.png" alt="Sistema SelfConnect" class="selfconnect-image">
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
         
@@ -1528,13 +1311,13 @@
                 </div>
                 
                 <div>
-                    <span class="price-old">R$ 299,90</span>
-                    <span class="discount-badge">R$ 100 OFF</span>
+                    <span class="price-old">R$ 79,90</span>
+                    <span class="discount-badge">R$ 20 OFF</span>
                 </div>
                 
-                <div class="price-new">R$ <span>199,90</span></div>
+                <div class="price-new">R$ <span>49,90</span></div>
                 
-                <p class="payment-info">Pagamento único e facilitado • Acesso vitalício • Frete Grátis </p>
+                <p class="payment-info">Pagamento único e facilitado • Acesso vitalício</p>
                 
                 <div class="benefits-grid">
                     <div class="benefit-item">
@@ -1543,7 +1326,7 @@
                     </div>
                     <div class="benefit-item">
                         <span class="check">✓</span>
-                        <span>Kit completo de peças para sistemas HE e CM (Ankylos)</span>
+                        <span>Estratégias que funcionam independentemente do sistema de implante utilizado.</span>
                     </div>
                     <div class="benefit-item">
                         <span class="check">✓</span>
